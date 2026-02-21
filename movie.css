@@ -33,17 +33,17 @@ body {
 /* TOP BANNER */
 
 #banner {
-  height: 50px;
+  height: 90px;
   background-image: url(assets/banner.png);
-  background-position: top left;
+  background-position: center top;
   background-repeat: repeat-x;
-  z-index: 10;
+  
 }
 
 /* CONTENT AREA */
 
 #content {
-  padding: 12px;
+   padding: 0 12px 12px 12px;
 }
 
 .placeholder {
@@ -64,6 +64,22 @@ body {
 #left-column {
   float: left;
   width: 550px;
+}
+/* SECTION 3: RATING */
+
+#rating {
+  
+   margin: 0;
+  padding: 0;
+  line-height: 0; 
+}
+
+#rating img {
+  display: block;
+   margin: 0 ;
+  padding: 0 ;
+   height: 83px; 
+ 
 }
 
 #sidebar {
