@@ -1,5 +1,3 @@
-/* CSS VARIABLES (bonus prep) */
-
 :root {
   --page-bg-texture: url(assets/background.png);
   --container-border: gray;
@@ -11,89 +9,184 @@
 }
 
 /* GLOBAL */
-
 body {
   margin: 0;
   background-image: var(--page-bg-texture);
   background-repeat: repeat;
   font: 8pt Verdana, Tahoma, sans-serif;
   color: var(--text-color);
+  width: auto;
+ 
 }
 
-/* MAIN CONTAINER */
-
+/* WHOLE PAGE WIDTH (800 main + 250 sidebar) */
 #page {
-  width: 800px;
+  width: 1080px;
   margin-left: auto;
   margin-right: auto;
-  border: 4px solid var(--container-border);
-  background: transparent;
+   background-color: var(--footer-text);
 }
 
-/* TOP BANNER */
-
+/* BANNER */
 #banner {
-  height: 90px;
+  height: 50px;
   background-image: url(assets/banner.png);
-  background-position: center top;
   background-repeat: repeat-x;
-  
+  background-position: center;
 }
 
-/* CONTENT AREA */
-
-#content {
-   padding: 0 12px 12px 12px;
+/* LAYOUT ROW */
+#layout {
+  padding: 12px;
+  box-sizing: border-box;
 }
 
-.placeholder {
-  color: #ffffff;
-  opacity: 0.8;
-}
-
-/*  BOTTOM BAR */
-
-#bottom-bar {
-  background: var(--footer-bg);
-  color: var(--footer-text);
-  text-align: center;
-  padding: 5px;
-}
-/* TWO-COLUMN LAYOUT */
-
-#left-column {
+/* MAIN 800 BOX */
+#mainbox {
   float: left;
-  width: 550px;
+  width: 800px;
+  border: 2px solid var(--container-border);
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 10px;
 }
-/* SECTION 3: RATING */
 
+/* INSIDE MAIN BOX */
+#main-inner {
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+/* LEFT PANEL + REVIEWS SIDE BY SIDE */
+#left-panel {
+  float: left;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+#reviews-panel {
+  float: right;
+  width: 480px; /* 800 - 280 - padding/gaps */
+  box-sizing: border-box;
+}
+
+/* RATING IMAGE */
 #rating {
-  
-   margin: 0;
+  margin: 0 0 10px 0;
   padding: 0;
-  line-height: 0; 
 }
 
 #rating img {
   display: block;
-   margin: 0 ;
-  padding: 0 ;
-   height: 83px; 
- 
+  width: 100%;
+  height: auto;
+   animation: ratingFadeIn 0.8s ease-out forwards;
+}
+@keyframes ratingFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* POSTERS: 2 rows x 3 columns */
+.poster-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px;
+  background-color: #ffffff;
 }
 
+.poster img {
+  display: block;
+  width: 100%;
+  height: 200px;        
+  object-fit: cover;    
+  border: 2px solid gray;
+  box-sizing: border-box;
+}
+
+.poster-caption {
+  font-size: 7pt;
+  text-align: center;
+  margin-top: 3px;
+}
+
+/* REVIEWS: two columns, 3 rows each */
+#reviews-container {
+  background-image: url(assets/background.png);
+  background-repeat: repeat;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.review-column {
+  float: left;
+  width: 47%;
+}
+
+.review-column + .review-column {
+  float: right;
+  width: 47%;
+}
+
+.review-box {
+  background: white;
+  border: 2px solid gray;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 160px;
+  box-shadow: #2d2d2d 2px 2px 5px;
+}
+
+/* SMALL STARS (fix your “huge stars” issue) */
+.review-stars img {
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+/* QUOTE BOLD */
+.review-quote {
+  font-weight: bold;
+  margin: 6px 0 6px 0;
+}
+
+/* CRITIC INFO ITALIC */
+.review-critic {
+  font-style: italic;
+  margin: 0;
+  position: relative;
+}
+
+.critic-grade {
+  float: right;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* SIDEBAR (NOT inside mainbox) */
 #sidebar {
   float: right;
   width: 250px;
   background: var(--sidebar-bg);
-  padding: 10px;
-  font-family: Arial, sans-serif;
-  font-size: 8pt;
+  padding: 12px;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  height: 600px;
+  border-radius: 10px;
 }
+
 #sidebar h2 {
   font-size: 12pt;
-  margin: 0 0 6px 0;
+  margin: 0 0 8px 0;
 }
 
 #sidebar dl {
@@ -113,15 +206,40 @@ body {
   padding: 0;
 }
 
-.clear {
-  clear: both;
+#sidebar-icons img {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
-/* VALIDATOR BADGES */
+#watch-trailer {
+  margin-top: 10px;
+  background: #2d2d2d;
+  color: #ffffff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  width: 110px;
+}
 
+/* BOTTOM BAR */
+#bottom-bar {
+  clear: both;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 7px 0;
+  margin-top: 12px;
+  border: 4px solid var(--container-border);
+  box-sizing: border-box;
+}
+
+/* VALIDATORS */
 #validators {
   position: fixed;
-  right: 10px;
+  left: 10px;
   bottom: 10px;
 }
 
@@ -129,4 +247,9 @@ body {
   display: block;
   margin-top: 6px;
   border: 0;
+}
+
+/* CLEARFIX */
+.clear {
+  clear: both;
 }

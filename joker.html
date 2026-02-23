@@ -13,45 +13,195 @@
 
 <body>
   <div id="page">
+
     <div id="banner"></div>
 
-   <div id="content">
-  <div id="left-column">
-    <div id="rating">
-  <img src="assets/rottenbig.png" alt="32% rating" />
-</div>
-  </div>
+    <!-- Layout: 800 main + 250 sidebar -->
+    <div id="layout">
 
-  <div id="sidebar">
-    <h2>Movie Details</h2>
-    <dl>
-      <dt>Director</dt><dd>—</dd>
-      <dt>Release</dt><dd>—</dd>
-      <dt>Runtime</dt><dd>—</dd>
-      <dt>Genre</dt><dd>—</dd>
-      <dt>Rating</dt><dd>—</dd>
-    </dl>
+      <!-- MAIN 800px BOX -->
+      <div id="mainbox">
 
-    <h2>Cast &amp; Crew</h2>
-    <ul>
-      <li>—</li>
-      <li>—</li>
-      <li>—</li>
-    </ul>
+        <div id="main-inner">
 
-    <h2>Information</h2>
-    <p>
-      <!-- icons/button come later -->
-      Social links + trailer button coming next.
-    </p>
-  </div>
+          <!-- LEFT PANEL: rating + posters -->
+          <div id="left-panel">
 
-  <div class="clear"></div>
-</div>
+            <div id="rating">
+              <img src="assets/rottenbig.png" alt="32% rating" />
+            </div>
+
+            <div id="posters">
+              <div class="poster-grid">
+                <div class="poster">
+                  <img src="assets/poster1.jpg" alt="Joker poster 1" />
+                  <div class="poster-caption">Official Poster 1</div>
+                </div>
+                <div class="poster">
+                  <img src="assets/poster2.jpg" alt="Joker poster 2" />
+                  <div class="poster-caption">Teaser Poster</div>
+                </div>
+                <div class="poster">
+                  <img src="assets/poster3.jpg" alt="Joker poster 3" />
+                  <div class="poster-caption">Character Poster</div>
+                </div>
+                <div class="poster">
+                  <img src="assets/poster4.jpg" alt="Joker poster 4" />
+                  <div class="poster-caption">Character Poster</div>
+                </div>
+                <div class="poster">
+                  <img src="assets/poster5.jpg" alt="Joker poster 5" />
+                  <div class="poster-caption">Official Poster 2</div>
+                </div>
+                <div class="poster">
+                  <img src="assets/poster6.jpg" alt="Joker poster 6" />
+                  <div class="poster-caption">Official Poster 3</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- REVIEWS PANEL -->
+          <div id="reviews-panel">
+
+            <div id="reviews-container">
+
+              <div class="review-column">
+
+                <div class="review-box">
+                  <div class="review-stars">
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                  </div>
+                  <p class="review-quote">&#8220;This feels more like a spin-off than a true sequel, 
+                    spending most of its runtime rehashing the original through 
+                    court scenes and interviews, rather than pushing the story forward.&#8221;</p>
+                  <p class="review-critic">&#8212; <span class="critic-name">Critic Name</span>, <span class="critic-org">Publication</span> <span class="critic-grade">2/5</span></p>
+                </div>
+
+                <div class="review-box">
+                  <div class="review-stars">
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_full.png" alt="star" />
+                  </div>
+                  <p class="review-quote">&#8220;This was an all star movie, a 10.&#8221;</p>
+                  <p class="review-critic">&#8212; <span class="critic-name">PrincessWilson</span>, <span class="critic-org">bestseller magazine</span> <span class="critic-grade">5/5</span></p>
+                </div>
+
+                <div class="review-box">
+                  <div class="review-stars">
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                  </div>
+                  <p class="review-quote">&#8220;I'm so irritated. "Joker" was a gritty,  raw, dark film that didn't need 
+                     gimmicks or unnecessary changes to make a statement. 
+                    So WHY in the world would anyone think it's a good idea to turn "Joker 2" into a musical?&#8221;</p>
+                  <p class="review-critic">&#8212; <span class="critic-name"> alsayear</span>, <span class="critic-org">IMDB </span> <span class="critic-grade">2.5/4</span></p>
+                </div>
+
+              </div>
+
+              <div class="review-column">
+
+                <div class="review-box">
+                  <div class="review-stars">
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                  </div>
+                  <p class="review-quote">&#8220;
+I know everyone hated on it, but I loved it. Kiss my butt. It was awesome.&#8221;</p>
+                  <p class="review-critic">&#8212; <span class="critic-name">Critic Name</span>, <span class="critic-org">Publication</span> <span class="critic-grade">C+</span></p>
+                </div>
+
+                <div class="review-box">
+                  <div class="review-stars">
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                  </div>
+                  <p class="review-quote">&#8220;Your review quote goes here.&#8221;</p>
+                  <p class="review-critic">&#8212; <span class="critic-name">Critic Name</span>, <span class="critic-org">Publication</span> <span class="critic-grade">2.5/4</span></p>
+                </div>
+
+                <div class="review-box">
+                  <div class="review-stars">
+                    <img src="assets/star_full.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                    <img src="assets/star_nonfull.png" alt="star" />
+                  </div>
+                  <p class="review-quote">&#8220;Your review quote goes here.&#8221;</p>
+                  <p class="review-critic">&#8212; <span class="critic-name">Critic Name</span>, <span class="critic-org">Publication</span> <span class="critic-grade">C+</span></p>
+                </div>
+
+              </div>
+
+              <div class="clear"></div>
+            </div>
+
+          </div>
+
+          <div class="clear"></div>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR (NOT inside mainbox) -->
+      <div id="sidebar">
+        <h2>Movie Details</h2>
+        <dl>
+          <dt>Director</dt><dd>Todd Phillips</dd>
+          <dt>Writers</dt><dd>Scott Silver, Todd Phillips</dd>
+          <dt>Release</dt><dd>Oct 4, 2024</dd>
+          <dt>Runtime</dt><dd>2h 18m</dd>
+          <dt>Genre</dt><dd>Crime, Drama, Musical</dd>
+          <dt>Rating</dt><dd>R</dd>
+        </dl>
+
+        <h2>Cast &amp; Crew</h2>
+        <ul>
+          <li>Joaquin Phoenix</li>
+          <li>Lady Gaga</li>
+          <li>Zazie Beetz</li>
+        </ul>
+
+        <h2>Information</h2>
+        <p>Studio: Warner Bros.</p>
+        <p>Budget: $200M (est.)</p>
+        <p>Box Office: TBD</p>
+
+        <div id="sidebar-icons">
+          <img src="assets/icon_facebook.png" alt="Facebook" />
+          <img src="assets/icon_twitter.png" alt="Twitter" />
+          <img src="assets/icon_instagram.png" alt="Instagram" />
+        </div>
+
+        <div id="watch-trailer">Watch Trailer</div>
+      </div>
+
+      <div class="clear"></div>
+    </div>
 
     <div id="bottom-bar">
       Total Reviews: 248 | Fresh: 79 | Rotten: 169
     </div>
+
   </div>
 
   <div id="validators">
@@ -62,5 +212,6 @@
       <img src="assets/vcss.png" alt="Valid CSS" />
     </a>
   </div>
+
 </body>
 </html>
