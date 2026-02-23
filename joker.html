@@ -11,6 +11,7 @@
   <link rel="icon" type="image/gif" href="assets/rotten.gif" />
 </head>
 
+
 <body>
   <div id="page">
 
@@ -187,15 +188,15 @@ I know everyone hated on it, but I loved it. Kiss my butt. It was awesome.&#8221
         <p>Budget: $200M (est.)</p>
         <p>Box Office: TBD</p>
 
-        <div id="sidebar-icons">
+        <!-- <div id="sidebar-icons">
           <img src="assets/icon_facebook.png" alt="Facebook" />
           <img src="assets/icon_twitter.png" alt="Twitter" />
           <img src="assets/icon_instagram.png" alt="Instagram" />
-        </div>
+        </div> -->
 
         <div id="watch-trailer">Watch Trailer</div>
       </div>
-
+<button id="theme-toggle" type="button">🌙 Dark mode</button>
       <div class="clear"></div>
     </div>
 
@@ -213,6 +214,32 @@ I know everyone hated on it, but I loved it. Kiss my butt. It was awesome.&#8221
       <img src="assets/vcss.png" alt="Valid CSS" />
     </a>
   </div>
+   <!-- With thus feature when the user clicks the button it switches the theme for light mode(original page design)
+    to dark mode, where the variables are overwritten-->
+  <script>
+  const root = document.documentElement;
+  const btn = document.getElementById("theme-toggle");
+
+  // Load saved theme (if any)
+  const saved = localStorage.getItem("theme");
+  if (saved) root.setAttribute("data-theme", saved);
+
+  // Update button label
+  function syncLabel() {
+    const isDark = root.getAttribute("data-theme") === "dark";
+    btn.textContent = isDark ? "☀️ Light mode" : "🌙 Dark mode";
+  }
+  syncLabel();
+
+  // Toggle on click
+  btn.addEventListener("click", () => {
+    const isDark = root.getAttribute("data-theme") === "dark";
+    const next = isDark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    syncLabel();
+  });
+</script>
 
 </body>
 </html>

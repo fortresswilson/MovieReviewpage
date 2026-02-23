@@ -1,4 +1,4 @@
-:root {
+:root[data-theme="dark"] {
   --page-bg-texture: url(assets/background.png);
   --container-border: gray;
   --sidebar-bg: #A2B964;
@@ -137,7 +137,7 @@ body {
 }
 
 .review-box {
-  background: white;
+  background: var(--footer-text);
   border: 2px solid gray;
   padding: 8px;
   margin-bottom: 10px;
@@ -213,12 +213,12 @@ body {
   padding: 0;
 }
 
-#sidebar-icons img {
+/* #sidebar-icons img {
   width: 18px;
   height: 18px;
   margin-right: 6px;
   vertical-align: middle;
-}
+} */
 
 #watch-trailer {
   margin-top: 10px;
@@ -330,4 +330,16 @@ body {
   #sidebar {
     padding: 10px;
   }
+}
+/* THEME TOGGLE BUTTON */
+#theme-toggle {
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--container-border);
+  background: transparent;
+  color: var(--text-color);
+  font-weight: bold;
+  margin-left: 400px;
+  margin-top: 20px;
 }
