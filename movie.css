@@ -145,8 +145,13 @@ body {
   border-radius: 10px;
   height: 160px;
   box-shadow: #2d2d2d 2px 2px 5px;
+   transform: 0.25s ease;
+    box-shadow: 0.25s ease;
 }
-
+.review-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.6);
+}
 /* SMALL STARS (fix your “huge stars” issue) */
 .review-stars img {
   width: 14px;
@@ -254,4 +259,75 @@ body {
 /* CLEARFIX */
 .clear {
   clear: both;
+}
+@media (max-width: 768px) {
+
+  /* Page becomes fluid */
+  #page {
+    width: 95%;
+  }
+
+  /* Stack main and sidebar */
+  #mainbox,
+  #sidebar {
+    float: none;
+    width: 100%;
+  }
+
+  #sidebar {
+    margin-top: 12px;
+    height: auto;
+  }
+
+  /* Left panel + reviews stack */
+  #left-panel,
+  #reviews-panel {
+    float: none;
+    width: 100%;
+  }
+
+  #reviews-panel {
+    margin-top: 12px;
+  }
+
+  /* Posters: 2 per row on tablets */
+  .poster-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reviews: single column */
+  #reviews-container {
+    grid-template-columns: 1fr;
+  }
+}@media (max-width: 480px) {
+
+  /* Slightly tighter page */
+  #page {
+    width: 100%;
+    margin: 0;
+  }
+
+  #layout {
+    padding: 8px;
+  }
+
+  /* Posters: 1 per row on phones */
+  .poster-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make rating a bit smaller */
+  #rating-number {
+    font-size: 22pt;
+  }
+
+  /* Review boxes auto height */
+  .review-box {
+    height: auto;
+  }
+
+  /* Sidebar spacing */
+  #sidebar {
+    padding: 10px;
+  }
 }
