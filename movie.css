@@ -80,7 +80,8 @@ body {
   display: block;
   width: 100%;
   height: auto;
-   animation: ratingFadeIn 0.8s ease-out forwards;
+
+  animation: ratingFadeIn 3.8s ease-out forwards;
 }
 @keyframes ratingFadeIn {
   from {
@@ -92,6 +93,7 @@ body {
     transform: scale(1);
   }
 }
+
 /* POSTERS: 2 rows x 3 columns */
 .poster-grid {
   display: grid;
